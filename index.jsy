@@ -1,0 +1,6 @@
+const express=require('express');
+const app=express();
+app.get('/',(req,res)=>res.send('BOSS SERVEUR EN LIGNE'));
+app.listen(3000,()=>console.log('Serveur OK'));
+0
+
