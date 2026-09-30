@@ -1,218 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8"> 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BOUBA STORE V11 ROYAL AUTOMATIQUE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>BOUBA STORE - Bons Plans CI</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Arial;background:#f2f2f2}
-header{background:#000;color:#fff;padding:12px;display:flex;align-items:center;gap:12px;position:sticky;top:0;z-index:9999;border-bottom:4px solid gold}
-#logo{width:65px;height:65px;background:gold;border-radius:15px;display:flex;align-items:center;justify-content:center;font-weight:900;color:#000;font-size:26px;overflow:hidden;border:3px solid #fff}
-#logo img{width:100%;height:100%;object-fit:cover}
-.btn{width:100%;padding:13px;border-radius:30px;border:2px solid #000;font-weight:bold;margin:5px 0;display:block;text-align:center;text-decoration:none;cursor:pointer;font-size:14px}
-.gold{background:gold;color:#000}.black{background:#000;color:gold}.green{background:#25D366;color:#fff}.blue{background:#007bff;color:#fff}.red{background:red;color:#fff}
-.prod{background:#fff;margin:10px;border-radius:20px;overflow:hidden;box-shadow:0 5px 15px rgba(0,0,0,0.2);border:2px solid #000}
-.prod img{width:100%;height:240px;object-fit:cover;display:block}
-.box{background:#fff;margin:12px;padding:15px;border-radius:15px;border:3px solid gold}
-input,select{width:100%;padding:13px;margin:6px 0;border:2px solid #000;border-radius:12px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-@media(max-width:700px){.grid{grid-template-columns:1fr}}
+body{font-family:Arial,sans-serif;background:#f5f5f5}
+.jforce-banner{background:linear-gradient(90deg,#ff6a00,#ee0979);padding:18px;text-align:center;position:sticky;top:0;z-index:9999}
+.jforce-banner a{color:white;font-weight:900;font-size:18px;text-decoration:none}
+.jforce-btn{background:white;color:#ff6a00;padding:10px 22px;border-radius:25px;display:inline-block;margin-top:10px;font-weight:bold}
+.header{background:#000;color:#fff;padding:35px 20px;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px;padding:20px}
+.card{background:#fff;border-radius:12px;padding:20px;text-align:center;box-shadow:0 2px 10px rgba(0,0,0,.1)}
+.card a{background:#ff6a00;color:#fff;padding:10px 18px;border-radius:8px;text-decoration:none;display:inline-block;margin-top:12px;font-weight:bold}
 </style>
 </head>
 <body>
-<div style="background:linear-gradient(90deg,#ff6a00,#ee0979);padding:15px;text-align:center;"><a href="https://jforce.jumia.ci/s/SjF1cRh" style="color:white;font-weight:900;font-size:16px;text-decoration:none;">🔥 BONS PLANS JUMIA - LIVRAISON 24H 🔥<br><span style="background:white;color:#ff6a00;padding:8px 15px;border-radius:20px;display:inline-block;margin-top:8px;">🛒 VOIR PRODUITS JUMIA →</span></a></div>
-<header>
-<div id="logo"><span id="logoTxt">BS</span><img id="logoImg" style="display:none"></div>
-<div><b style="color:gold">BOUBA STORE</b><br><small style="color:#fff">ROYAL V11 AUTO 👑 0787619717</small></div>
-<div style="margin-left:auto;display:flex;flex-direction:column;gap:5px">
-<button class="btn gold" style="padding:7px;margin:0;font-size:12px" onclick="document.getElementById('modalCompte').style.display='block'">👤 COMPTE</button>
-<a href="#admin" class="btn black" style="padding:7px;margin:0;font-size:12px;text-decoration:none">ADMIN</a>
+<div class="jforce-banner">
+<a href="https://jforce.jumia.ci/s/SjF1cRh">🔥 BONS PLANS JUMIA CI - LIVRAISON 24H 🔥<br>
+<span class="jforce-btn">🛒 VOIR LES PRODUITS JUMIA →</span></a>
 </div>
-</header>
-
-<div style="background:gold;color:#000;text-align:cente
-<div style="background:linear-gradient(90deg,#ff6600,#ff9900);padding:15px;margin:10px;border-radius:12px;text-align:center;border:2px solid gold"><p style="color:white;font-weight:bold;margin:0">🔥 BONS PLANS JUMIA - LIVRAISON 24H 🔥</p><a href="https://jforce.jumia.ci/s/SjF1cRh" target="_blank" style="background:white;color:#ff6600;padding:12px 20px;border-radius:25px;text-decoration:none;font-weight:bold;display:inline-block;margin-top:8px">🛒 VOIR PRODUITS JUMIA →</a></div>
-r;padding:8px;font-weight:bold">🔥 JUMIA | ALIBABA | AMAZON | PAIEMENT & REMBOURSEMENT AUTO 🛡️</div>
-
-<!-- VIDEO PUB QUI S'AFFICHE AUTO APRÈS SÉLECTION -->
-<div style="margin:12px;border-radius:20px;overflow:hidden;border:3px solid #000;background:#000">
-<video id="videoPub" controls autoplay muted loop style="width:100%;height:230px;display:block" poster="https://via.placeholder.com/800x400/000000/FFD700?text=BOUBA+STORE+PUB+ROYALE"></video>
-<div style="background:gold;color:#000;text-align:center;padding:6px;font-weight:bold">📢 VIDÉO PUB ROYALE - S'AFFICHE AUTO</div>
+<div class="header">
+<h1>👑 BOUBA STORE 👑</h1>
+<p>DIEU AU CONTRÔLE - Abidjan, Bouaké, Yamoussoukro</p>
 </div>
-
-<div id="store" class="grid"></div>
-
-<!-- COMPTE CLIENT COMPLET -->
-<div id="modalCompte" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:10000;padding:15px;overflow:auto">
-<div class="box">
-<h2 style="text-align:center">👑 CRÉER COMPTE CLIENT</h2>
-<input id="cNom" placeholder="Nom complet *">
-<input id="cTel" placeholder="WhatsApp +225... *">
-<input id="cEmail" placeholder="Email">
-<input id="cVille" placeholder="Ville/Commune *">
-<input id="cAddr" placeholder="Adresse complète *">
-<input id="cPass" type="password" placeholder="Mot de passe *">
-<button class="btn gold" onclick="creerCompte()">CRÉER COMPTE 💎</button>
-<hr style="margin:10px 0">
-<input id="lTel" placeholder="Numéro">
-<input id="lPass" type="password" placeholder="Mot de passe">
-<button class="btn black" onclick="login()">SE CONNECTER</button>
-<button class="btn red" onclick="document.getElementById('modalCompte').style.display='none'">FERMER X</button>
+<div class="grid">
+<div class="card"><h3>📱 Smartphones</h3><p>Infinix, Tecno, Samsung - Prix Jumia</p><a href="https://jforce.jumia.ci/s/SjF1cRh">Acheter sur Jumia</a></div>
+<div class="card"><h3>👕 Mode & Chaussures</h3><p>Collection Homme 2026</p><a href="https://jforce.jumia.ci/s/SjF1cRh">Voir sur Jumia</a></div>
+<div class="card"><h3>🏠 Maison & Cuisine</h3><p>Électroménager livraison rapide</p><a href="https://jforce.jumia.ci/s/SjF1cRh">Voir sur Jumia</a></div>
 </div>
-</div>
-
-<!-- PAIEMENT + REMBOURSEMENT -->
-<div id="modalPay" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.95);z-index:10000;padding:15px">
-<div class="box" style="text-align:center">
-<h2>💳 PAIEMENT & REMBOURSEMENT</h2>
-<b id="payProd"></b><br><br>
-<button class="btn gold" onclick="payer('WAVE')">WAVE 💙</button>
-<button class="btn gold" style="background:orange" onclick="payer('ORANGE MONEY')">ORANGE MONEY 🧡</button>
-<button class="btn gold" style="background:#ffcc00" onclick="payer('MTN')">MTN 💛</button>
-<button class="btn black" onclick="payer('LIVRAISON')">LIVRAISON 🚚</button>
-<div style="background:#ffe6e6;padding:12px;border-radius:12px;margin-top:12px;border:2px solid red">
-<b>🛡️ REMBOURSEMENT GARANTI 24H</b><br><small>Article manquant? Remboursement intégral</small><br>
-<button class="btn red" onclick="rembourser()">DEMANDER REMBOURSEMENT</button>
-</div>
-<button class="btn red" onclick="document.getElementById('modalPay').style.display='none'">FERMER</button>
-</div>
-</div>
-
-<h2 id="admin" style="background:#000;color:gold;padding:15px;text-align:center;margin-top:15px">👑 ADMIN ROYAL - SÉLECTION AUTO 👑</h2>
-
-<div class="box">
-<b>1. LOGO - SÉLECTIONNE, IL S'AFFICHE AUTO EN HAUT</b><br>
-<input type="file" accept="image/*" onchange="autoLogo(this)">
-<div style="margin-top:8px">Aperçu: <img id="prevLogo" style="width:100px;height:100px;border-radius:15px;display:none;border:3px solid gold;object-fit:cover"></div>
-</div>
-
-<div class="box">
-<b>2. VIDÉO PUB - SÉLECTIONNE, ELLE S'AFFICHE AUTO EN HAUT</b><br>
-<input type="file" accept="video/*" onchange="autoVideo(this)">
-<small>Sélectionne vidéo → elle joue auto direct</small>
-</div>
-
-<div class="box" style="background:linear-gradient(135deg,gold,#fff)">
-<b>3. PRODUIT - IMAGE SÉLECTIONNÉE S'AFFICHE AUTO</b><br>
-<input id="pName" placeholder="Nom produit">
-<input id="pPrice" placeholder="Prix ex: 25000 FCFA">
-<select id="pType"><option value="JUMIA">JUMIA</option><option value="ALIBABA">ALIBABA</option><option value="AMAZON">AMAZON</option><option value="STOCK">MON STOCK</option></select>
-<input id="pLink" placeholder="Lien partenariat">
-<input id="pDesc" placeholder="Description">
-<input type="file" id="pImg" accept="image/*" onchange="previewProd(this)"><br>
-<img id="prevProd" style="width:100%;height:150px;object-fit:cover;display:none;border-radius:12px;margin:5px 0;border:2px solid #000">
-<button class="btn black" onclick="addProd()">PUBLIER - AUTO SANS RÉGLAGE 👑</button>
-</div>
-
-<div class="box"><b>👥 CLIENTS - INFOS COMPLÈTES</b><div id="listC"></div></div>
-<div class="box"><b>📦 COMMANDES & PAIEMENTS</b><div id="listO"></div></div>
-
-<script>
-const WA = "2250787619717";
-let tmpProdImg = "";
-
-function autoLogo(input){
- let file=input.files[0];
- let url=URL.createObjectURL(file);
- document.getElementById('logoImg').src=url;
- document.getElementById('logoImg').style.display='block';
- document.getElementById('logoTxt').style.display='none';
- document.getElementById('prevLogo').src=url;
- document.getElementById('prevLogo').style.display='block';
- let r=new FileReader();r.onload=e=>localStorage.setItem('logoV11',e.target.result);r.readAsDataURL(file);
-}
-function autoVideo(input){
- let file=input.files[0];
- let url=URL.createObjectURL(file);
- document.getElementById('videoPub').src=url;
- document.getElementById('videoPub').play();
- let r=new FileReader();r.onload=e=>localStorage.setItem('videoV11',e.target.result);r.readAsDataURL(file);
- alert('Vidéo pub affichée auto!');
-}
-function previewProd(input){
- let file=input.files[0];
- let url=URL.createObjectURL(file);
- document.getElementById('prevProd').src=url;
- document.getElementById('prevProd').style.display='block';
- let r=new FileReader();r.onload=e=>tmpProdImg=e.target.result;r.readAsDataURL(file);
-}
-// RESTAURATION AUTO AU CHARGEMENT
-let savedLogo=localStorage.getItem('logoV11');
-if(savedLogo){document.getElementById('logoImg').src=savedLogo;document.getElementById('logoImg').style.display='block';document.getElementById('logoTxt').style.display='none';document.getElementById('prevLogo').src=savedLogo;document.getElementById('prevLogo').style.display='block';}
-let savedVideo=localStorage.getItem('videoV11');
-if(savedVideo){document.getElementById('videoPub').src=savedVideo;}
-
-let defaults=[
-{name:"Chaussure Nike - JUMIA",price:"28.000 FCFA",type:"JUMIA",link:"https://www.jumia.ci",desc:"Livraison Abidjan",img:"https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500"},
-{name:"Montre Connectée - ALIBABA",price:"15.000 FCFA",type:"ALIBABA",link:"https://www.alibaba.com",desc:"Smartwatch",img:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500"}
-];
-function addProd(){
- let n=document.getElementById('pName').value,pr=document.getElementById('pPrice').value,ty=document.getElementById('pType').value,lk=document.getElementById('pLink').value,ds=document.getElementById('pDesc').value;
- if(!n||!pr){alert('Nom et Prix');return;}
- let img=tmpProdImg||"https://via.placeholder.com/500x400/FFD700/000000?text="+encodeURIComponent(n);
- let list=JSON.parse(localStorage.getItem('prodsV11')||JSON.stringify(defaults));
- list.unshift({name:n,price:pr,type:ty,link:lk,desc:ds,img:img});
- localStorage.setItem('prodsV11',JSON.stringify(list));render();
- alert('Produit publié! S affiche auto!');tmpProdImg="";document.getElementById('prevProd').style.display='none';
-}
-function render(){
- let list=JSON.parse(localStorage.getItem('prodsV11')||JSON.stringify(defaults));
- let h='';list.forEach(p=>{
-  let c=p.type=='JUMIA'?'#f90':p.type=='ALIBABA'?'#ff6a00':p.type=='AMAZON'?'#000':'#b8860b';
-  h+=`<div class=prod><img src="${p.img}"><div style="padding:12px"><span style="background:${c};color:#fff;padding:4px 10px;border-radius:12px;font-size:11px;font-weight:bold">${p.type}</span>
-  <h3 style="margin:6px 0">${p.name}</h3><small>${p.desc}</small><br><b style="font-size:21px;color:#b8860b">${p.price}</b>
-  ${p.link?`<a href="${p.link}" target=_blank class="btn gold">ACHETER SUR ${p.type} 💰</a>`:''}
-  <a href="https://wa.me/${WA}?text=Salut%20BOUBA%20je%20veux%20${encodeURIComponent(p.name)}" target=_blank class="btn green">💬 PARLER DIRECT 0787619717</a>
-  <button class="btn blue" onclick="openPay('${p.name.replace(/'/g,'')}')">💳 PAYER - Wave/OM/MTN</button>
-  <button class="btn black" onclick="cmd('${p.name.replace(/'/g,'')}')">📦 COMMANDER</button>
-  </div></div>`;
- });
- document.getElementById('store').innerHTML=h;
-}
-render();
-
-function creerCompte(){
- let u={nom:document.getElementById('cNom').value,tel:document.getElementById('cTel').value,email:document.getElementById('cEmail').value,ville:document.getElementById('cVille').value,addr:document.getElementById('cAddr').value,pass:document.getElementById('cPass').value,date:new Date().toLocaleString()};
- if(!u.nom||!u.tel||!u.ville||!u.addr||!u.pass){alert('Remplis tout *');return;}
- let users=JSON.parse(localStorage.getItem('usersV11')||'[]');users.push(u);localStorage.setItem('usersV11',JSON.stringify(users));localStorage.setItem('curV11',JSON.stringify(u));
- alert('Compte créé '+u.nom);document.getElementById('modalCompte').style.display='none';renderClients();
-}
-function login(){
- let t=document.getElementById('lTel').value,p=document.getElementById('lPass').value;
- let users=JSON.parse(localStorage.getItem('usersV11')||'[]');let f=users.find(x=>x.tel==t&&x.pass==p);
- if(f){localStorage.setItem('curV11',JSON.stringify(f));alert('Connecté '+f.nom);document.getElementById('modalCompte').style.display='none';}else alert('Erreur');
-}
-function cmd(prod){
- let cur=JSON.parse(localStorage.getItem('curV11')||'null');
- if(!cur){alert('Crée compte d abord');document.getElementById('modalCompte').style.display='block';return;}
- let orders=JSON.parse(localStorage.getItem('ordersV11')||'[]');
- orders.push({produit:prod,client:cur.nom,tel:cur.tel,ville:cur.ville,addr:cur.addr,date:new Date().toLocaleString(),statut:"Commandé"});
- localStorage.setItem('ordersV11',JSON.stringify(orders));
- window.open(`https://wa.me/${WA}?text=COMMANDE%20👑%0A${encodeURIComponent(prod)}%0AClient:${cur.nom}%0ATel:${cur.tel}%0AVille:${cur.ville}%0AAddr:${cur.addr}`,'_blank');
- renderOrders();
-}
-function renderClients(){let users=JSON.parse(localStorage.getItem('usersV11')||'[]');document.getElementById('listC').innerHTML=users.map(u=>`<div style="border:2px solid #000;padding:6px;margin:4px;border-radius:8px;background:#fff8dc">👑 ${u.nom} | ${u.tel} | ${u.ville} | ${u.addr} | ${u.date}</div>`).join('')||'Aucun';}
-function renderOrders(){let o=JSON.parse(localStorage.getItem('ordersV11')||'[]');document.getElementById('listO').innerHTML=o.map(x=>`<div style="border:2px solid #000;padding:6px;margin:4px;border-radius:8px;background:#e6ffe6">📦 ${x.produit} - ${x.client} ${x.tel} - ${x.statut} - ${x.date}</div>`).join('')||'Aucune';}
-renderClients();renderOrders();
-
-let curPay='';
-function openPay(n){curPay=n;document.getElementById('payProd').innerText=n;document.getElementById('modalPay').style.display='block';}
-function payer(m){
- let cur=JSON.parse(localStorage.getItem('curV11')||'null');
- if(!cur){alert('Crée compte');document.getElementById('modalCompte').style.display='block';return;}
- let orders=JSON.parse(localStorage.getItem('ordersV11')||'[]');
- orders.push({produit:curPay,client:cur.nom,tel:cur.tel,ville:cur.ville,addr:cur.addr,date:new Date().toLocaleString(),statut:"Payé "+m});
- localStorage.setItem('ordersV11',JSON.stringify(orders));
- window.open(`https://wa.me/${WA}?text=PAIEMENT%20${m}%20👑%0A${encodeURIComponent(curPay)}%0AClient:${cur.nom}%20Tel:${cur.tel}`,'_blank');
- document.getElementById('modalPay').style.display='none';renderOrders();alert('Paiement '+m+' enregistré!');
-}
-function rembourser(){
- let cur=JSON.parse(localStorage.getItem('curV11')||'null');
- if(!cur){alert('Connecte-toi');return;}
- window.open(`https://wa.me/${WA}?text=REMBOURSEMENT%20🛡️%0A${encodeURIComponent(curPay)}%0AClient:${cur.nom}%20Tel:${cur.tel}%0ARaison:Manque%20article`,'_blank');
- alert('Demande remboursement envoyée! 24h garanti');
-}
-</script>
 </body>
 </html>
